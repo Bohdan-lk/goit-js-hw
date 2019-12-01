@@ -1,42 +1,45 @@
-const australia = 170;
-const jamaica = 120;
-const india = 80;
-let costTransition;
-let inputCountry = prompt('Страна доставки.');
-if (inputCountry === null) {
-    alert('Отменено пользователем!');
+'use strict';
+let costOfDelivery;
+let country;
+const deliveryCountry = prompt('Выберите страну доставки');
+
+if (deliveryCountry === null) {
+    alert('Доставка отклонена');
+    console.log('Доставка отклонена');
 } else {
-    switch (inputCountry.toLowerCase()) {
+    switch (deliveryCountry.toLowerCase()) {
         case 'китай':
-            costTransition = china;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
+            costOfDelivery = 100;
+            country = 'Китай';
             break;
+
         case 'чили':
-            costTransition = chile;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
+            costOfDelivery = 250;
+            country = 'Чили';
             break;
+
         case 'австралия':
-            costTransition = australia;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
+            costOfDelivery = 170;
+            country = 'Австралия';
             break;
+
         case 'индия':
-            costTransition = india;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
+            costOfDelivery = 80;
+            country = 'Индия';
             break;
+
         case 'ямайка':
-            costTransition = jamaica;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
+            costOfDelivery = 120;
+            country = 'Ямайка';
             break;
-        default:alert('В вашей стране доставка не доступна');
+
+        default:
+            alert('В вашей стране доставка не доступна');
+            console.log('В вашей стране доставка не доступна');
     }
+}
+
+if (country !== undefined) {
+    alert(`Доставка в ${country} будет стоить ${costOfDelivery} кредитов`);
+    console.log(`Доставка в ${country} будет стоить ${costOfDelivery} кредитов`);
 }
