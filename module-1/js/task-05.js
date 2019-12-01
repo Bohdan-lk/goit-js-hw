@@ -1,6 +1,6 @@
 const australia = 170;
-const india = 80;
 const jamaica = 120;
+const india = 80;
 let costTransition;
 let inputCountry = prompt('Страна доставки.');
 if (inputCountry === null) {
