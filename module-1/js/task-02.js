@@ -1,12 +1,10 @@
 'use strict';
 
-const total = 100;
-const ordered = 99;
+const total = 100; // количество товаров на складе
+const ordered = 80; // единиц товара в заказе
 
-let reply;
-if (total >= ordered) {
-    reply = 'Заказ оформлен, с вами свяжется менеджер';
+if (ordered > total) {
+    console.log('На складе недостаточно товаров!');
 } else {
-    reply = 'На складе недостаточно товаров';
+    console.log('Заказ оформлен, с вами свяжется менеджер');
 }
-console.log(reply);

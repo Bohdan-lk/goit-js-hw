@@ -1,42 +1,42 @@
-const australia = 170;
-const india = 80;
-const jamaica = 120;
-let costTransition;
-let inputCountry = prompt('Страна доставки.');
-if (inputCountry === null) {
-    alert('Отменено пользователем!');
-} else {
-    switch (inputCountry.toLowerCase()) {
-        case 'китай':
-            costTransition = china;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
-            break;
-        case 'чили':
-            costTransition = chile;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
-            break;
-        case 'австралия':
-            costTransition = australia;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
-            break;
-        case 'индия':
-            costTransition = india;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
-            break;
-        case 'ямайка':
-            costTransition = jamaica;
-            alert(
-                `Доставка в ${inputCountry.toLowerCase()} будет стоить ${costTransition} кредитов`,
-            );
-            break;
-        default:alert('В вашей стране доставка не доступна');
-    }
+'use strict';
+
+let message;
+let price;
+let userCountry = prompt('Введите название страны доставки:');
+userCountry = userCountry.toLowerCase();
+switch (userCountry) {
+    case 'китай':
+        userCountry = 'Китай';
+        price = 100;
+        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
+        break;
+
+    case 'чили':
+        userCountry = 'Чили';
+        price = 250;
+        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
+        break;
+
+    case 'австралия':
+        userCountry = 'Австралия';
+        price = 170;
+        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
+        break;
+
+    case 'индия':
+        userCountry = 'Индия';
+        price = 80;
+        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
+        break;
+
+    case 'ямайка':
+        userCountry = 'Ямайка';
+        price = 120;
+        message = `Доставка в ${userCountry} будет стоить ${price} кредитов`;
+        break;
+
+    default:
+        message = 'в вашей стране доставка не доступна';
 }
+
+alert(message);
