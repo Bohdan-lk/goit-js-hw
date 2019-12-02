@@ -1,7 +1,7 @@
 'use strict';
 
-const total = 100; // количество товаров на складе
-const ordered = 80; // единиц товара в заказе
+const total = 100;
+const ordered = 80;
 
 if (ordered > total) {
     console.log('На складе недостаточно товаров!');
