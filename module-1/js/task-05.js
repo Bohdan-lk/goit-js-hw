@@ -1,42 +1,35 @@
 'use strict';
 
-let message;
-let price;
-let userCountry = prompt('Введите название страны доставки:');
-userCountry = userCountry.toLowerCase();
-switch (userCountry) {
-    case 'китай':
-        userCountry = 'Китай';
-        price = 100;
-        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
-        break;
+const deliveryToChina = 100;
+const deliveryToChile = 250;
+const deliveryToAustralia = 170;
+const deliveryToIndia = 80;
+const deliveryToJamaica = 120;
+let input;
 
-    case 'чили':
-        userCountry = 'Чили';
-        price = 250;
-        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
-        break;
+input = prompt('Укажите страну доставки:');
 
-    case 'австралия':
-        userCountry = 'Австралия';
-        price = 170;
-        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
-        break;
+if (input === null || input === '') {
 
-    case 'индия':
-        userCountry = 'Индия';
-        price = 80;
-        message = `доставка в ${userCountry} будет стоить ${price} кредитов`;
-        break;
+} else {
 
-    case 'ямайка':
-        userCountry = 'Ямайка';
-        price = 120;
-        message = `Доставка в ${userCountry} будет стоить ${price} кредитов`;
-        break;
-
-    default:
-        message = 'в вашей стране доставка не доступна';
+    switch (input.toLowerCase()) {
+        case 'китай' :
+            console.log(`Доставка в Китай будет стоить ${deliveryToChina}`);
+            break;
+        case 'чили' :
+            console.log(`Доставка в Чили будет стоить ${deliveryToChile}`);
+            break;
+        case 'австралия' :
+            console.log(`Доставка в Австралию будет стоить ${deliveryToAustralia}`);
+            break;
+        case 'индия' :
+            console.log(`Доставка в Индию будет стоить ${deliveryToIndia}`);
+            break;
+        case 'ямайка' :
+            console.log(`Доставка в Ямайку будет стоить ${deliveryToJamaica}`);
+            break;
+        default:
+            console.log('В вашей стране доставка не доступна');
+    }
 }
-
-alert(message);

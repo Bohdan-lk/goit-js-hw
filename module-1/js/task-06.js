@@ -2,18 +2,11 @@
 
 let input;
 let total = 0;
+const message = 'Общая сумма чисел равна';
 
-while (true) {
-    input = prompt('Введите число');
+do {
+    input = prompt('Введите число:');
+    total = total + Number(input);
+} while (input !== null);
 
-    if (input === null) {
-        break;
-    }
-    input = Number(input);
-    if (Number.isNaN(input) === true) {
-        alert('Было введено не число, попробуйте еще раз');
-    } else {
-        total += input;
-    }
-}
-alert(`Общая сумма чисел равна ${total}`);
+alert(`${message} ${total}`);
